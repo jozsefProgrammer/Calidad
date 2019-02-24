@@ -70,12 +70,12 @@ namespace Logica
                 Usuario user = new Usuario();
                 foreach (DataRow fila in ds.Tables[0].Rows)
                 {
-                    Usuario users = new Usuario();
-                    users.id = fila["id"].ToString();
-                    users.Nombre = fila["Nombre"].ToString();
-                    users.idPerfil = Convert.ToInt16(fila["Perfil"]);
-                    users.contrasenna = fila["Contraseña"].ToString();
-                    users.Estado = Convert.ToInt16(fila["Estado"]);
+
+                    user.id = fila["id"].ToString();
+                    user.Nombre = fila["Nombre"].ToString();
+                    user.idPerfil = Convert.ToInt16(fila["Perfil"]);
+                    user.contrasenna = fila["Contraseña"].ToString();
+                    user.Estado = Convert.ToInt16(fila["Estado"]);
                 }
 
                 return user;
