@@ -67,6 +67,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Eventos.aspx" />
     <Content Include="packages.config" />
     <Content Include="Recursos\bootstrap-4.3.1-dist\css\bootstrap-grid.css.map" />
     <Content Include="Recursos\bootstrap-4.3.1-dist\css\bootstrap-grid.min.css.map" />
@@ -103,6 +104,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Eventos.aspx.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eventos.aspx.designer.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

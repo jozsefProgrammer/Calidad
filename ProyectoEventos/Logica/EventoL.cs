@@ -11,7 +11,7 @@ namespace Logica
 {
     public class EventoL
     {
-        public void Nuevo(Evento evento, string accion)
+        public static void Nuevo(Evento evento, string accion)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Logica
                     Evento evento = new Evento();
                     evento.id = fila["id"].ToString();
                     evento.Nombre = fila["Nombre"].ToString();
-                    evento.Fecha =  Convert.ToDateTime(fila["Perfil"]);
+                    evento.Fecha =  Convert.ToDateTime(fila["Fecha"]);
                     evento.Estado = Convert.ToChar(fila["Estado"]);
 
                     lista.Add(evento);
