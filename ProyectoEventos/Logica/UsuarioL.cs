@@ -11,6 +11,7 @@ namespace Logica
 {
     public class UsuarioL
     {
+        private UsuarioD datos = new UsuarioD();
         public void Nuevo(Usuario user, string accion)
         {
             try
@@ -47,7 +48,7 @@ namespace Logica
                     Usuario users = new Usuario();
                     users.id = fila["id"].ToString();
                     users.Nombre = fila["Nombre"].ToString();
-                    users.idPerfil = (int)fila["Perfil"];
+                    users.idPerfil = Convert.ToInt16(fila["Perfil"]);
                     users.contrasenna = fila["Contraseña"].ToString();
                     users.Estado = Convert.ToInt16(fila["Estado"]);
 
@@ -60,6 +61,29 @@ namespace Logica
                 throw new ApplicationException(ex.Message);
             }
 
+        }
+        public Usuario SeleccionarUsuario(Usuario usuario)
+        {
+            try
+            {
+                DataSet ds = datos.SeleccionarUsuario(usuario);
+                Usuario user = new Usuario();
+                foreach (DataRow fila in ds.Tables[0].Rows)
+                {
+                    Usuario users = new Usuario();
+                    users.id = fila["id"].ToString();
+                    users.Nombre = fila["Nombre"].ToString();
+                    users.idPerfil = Convert.ToInt16(fila["Perfil"]);
+                    users.contrasenna = fila["Contraseña"].ToString();
+                    users.Estado = Convert.ToInt16(fila["Estado"]);
+                }
+
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException(ex.Message);
+            }
         }
     }
 }
