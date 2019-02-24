@@ -66,18 +66,37 @@
         }
     </style>
     <div class="wrapper">
+
+
         <form class="form-signin" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <h2 class="form-signin-heading">Please login</h2>
-            <div class="row">
-                <asp:TextBox CssClass="form-control" ID="TxtCedula" placeholder="Cédula" runat="server"></asp:TextBox>
+            <div class="container">
+                <div class="row">
+                    <asp:TextBox CssClass="form-control" ID="TxtCedula" placeholder="Cédula" runat="server"></asp:TextBox>
+                </div>
+                <div class="row">
+                    <asp:TextBox CssClass="form-control" ID="TxtContrasenna" placeholder="Contraseña" TextMode="Password" runat="server"></asp:TextBox>
+                </div>
+                <div class="row">
+                    <asp:Button OnClick="btnLogin_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnLogin" runat="server" Text="Login" />
+                </div>
+                <div class="alert alert-danger" runat="server" style="display:none;" id="error" role="alert">
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:Label ID="lblMsj" runat="server" Text=""></asp:Label>
+                        </ContentTemplate>    
+                    </asp:UpdatePanel>
+                </div>
             </div>
-            <div class="row">
-                <asp:TextBox CssClass="form-control" ID="TxtContrasenna" placeholder="Contraseña" TextMode="Password" runat="server"></asp:TextBox>
-            </div>
-            <asp:Button OnClick="btnLogin_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnLogin" runat="server" Text="Login" />
+            
         </form>
+
+
+
     </div>
     <script src="Recursos/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="Recursos/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

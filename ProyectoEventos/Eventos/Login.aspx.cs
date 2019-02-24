@@ -30,15 +30,19 @@ namespace Eventos
 
                 miUsuario = userl.SeleccionarUsuario(user);
 
-                if(miUsuario == null)
+                if(String.IsNullOrEmpty(miUsuario.id))
                 {
-
-                }else
+                    lblMsj.Text = "El usuario no existe o se encuentra inactivo.";
+                    error.Attributes.Remove("style");
+                    error.Attributes.Add("style", "display:block");
+                    return;
+                }
+                else
                 {
-                    Response.Redirect("");
+                    Response.Redirect("index.aspx");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
