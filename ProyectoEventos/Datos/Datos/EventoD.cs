@@ -39,6 +39,7 @@ namespace Datos.Datos
                 comando.Parameters.AddWithValue("@id", even.id);
                 comando.Parameters.AddWithValue("@nombre", even.Nombre);
                 comando.Parameters.AddWithValue("@fecha", even.Fecha);
+                comando.Parameters.AddWithValue("@estado", even.Estado);
                 comando.Parameters.AddWithValue("@accion", accion);
 
                 db.ExecuteNonQuery(comando);
@@ -56,8 +57,11 @@ namespace Datos.Datos
                 Database db = DatabaseFactory.CreateDatabase("Default");
                 SqlCommand comando = new SqlCommand("SP_SEG_TRANS_EVENTO");
                 comando.CommandType = CommandType.StoredProcedure;
+
                 comando.Parameters.AddWithValue("@id", even.id);
-                comando.Parameters.AddWithValue("@Estado", even.Estado);
+                comando.Parameters.AddWithValue("@nombre", even.Nombre);
+                comando.Parameters.AddWithValue("@fecha", even.Fecha);
+                comando.Parameters.AddWithValue("@estado", even.Estado);
                 comando.Parameters.AddWithValue("@accion", accion);
 
                 db.ExecuteNonQuery(comando);

@@ -57,10 +57,11 @@ namespace Datos.Datos
                 SqlCommand comando = new SqlCommand("SP_SEG_TRANS_USUARIO");
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@id", user.id);
-                comando.Parameters.AddWithValue("@accion", accion);
                 comando.Parameters.AddWithValue("@Nombre", user.Nombre);
                 comando.Parameters.AddWithValue("@Perfil", user.idPerfil);
-                comando.Parameters.AddWithValue("@Contraseña", user.contrasenna);
+                comando.Parameters.AddWithValue("@Estado", user.Estado);
+                comando.Parameters.AddWithValue("@Contrasenna", user.contrasenna);
+                comando.Parameters.AddWithValue("@accion", accion);
                 db.ExecuteNonQuery(comando);
             }
             catch (Exception ex)
@@ -77,7 +78,10 @@ namespace Datos.Datos
                 SqlCommand comando = new SqlCommand("SP_SEG_TRANS_USUARIO");
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@id", user.id);
+                comando.Parameters.AddWithValue("@Nombre", user.Nombre);
+                comando.Parameters.AddWithValue("@Perfil", user.idPerfil);
                 comando.Parameters.AddWithValue("@Estado", user.Estado);
+                comando.Parameters.AddWithValue("@Contrasenna", user.contrasenna);
                 comando.Parameters.AddWithValue("@accion", accion);
 
                 db.ExecuteNonQuery(comando);
