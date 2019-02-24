@@ -11,8 +11,8 @@ namespace Logica
 {
     public class UsuarioL
     {
-        private UsuarioD datos = new UsuarioD();
-        public void Nuevo(Usuario user, string accion)
+        private static UsuarioD datos = new UsuarioD();
+        public static void Nuevo(Usuario user, string accion)
         {
             try
             {
