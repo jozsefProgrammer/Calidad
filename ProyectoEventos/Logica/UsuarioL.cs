@@ -70,7 +70,6 @@ namespace Logica
                 Usuario user = new Usuario();
                 foreach (DataRow fila in ds.Tables[0].Rows)
                 {
-
                     user.id = fila["id"].ToString();
                     user.Nombre = fila["Nombre"].ToString();
                     user.idPerfil = Convert.ToInt16(fila["Perfil"]);
