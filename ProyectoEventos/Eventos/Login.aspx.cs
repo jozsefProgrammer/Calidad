@@ -39,6 +39,7 @@ namespace Eventos
                 }
                 else
                 {
+                    Session["login"] = miUsuario;
                     Response.Redirect("index.aspx");
                 }
             }

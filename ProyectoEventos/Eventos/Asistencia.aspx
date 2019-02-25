@@ -8,7 +8,7 @@
             <div class="col-lg-6 offset-lg-3">
                 <div class="col-lg-6">
                     <div class="wrapper">
-                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        
                         <h2 class="form-signin-heading">Marcar Asistencia</h2>
                         <div class="container col-lg-12">
                             <div class="row">
@@ -29,7 +29,7 @@
                                 <asp:TextBox CssClass="form-control" ID="TxtUsuarioRegistra" placeholder="Nombre" runat="server" Enabled="false"></asp:TextBox>
                             </div>
                             <div class="row">
-                                <asp:TextBox CssClass="form-control" ID="TxtFechaRegistra" placeholder="Fecha del Registro" TextMode="Password" runat="server" Enabled="false"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TxtFechaRegistra" placeholder="Fecha del Registro" runat="server" Enabled="false"></asp:TextBox>
                             </div>
                             <div class="row">
                                 <asp:DropDownList ID="ddlEstado" CssClass="form-control" runat="server">
@@ -65,14 +65,13 @@
                                 CellPadding="4"
                                 AllowPaging="true"
                                 PageSize="10"
-                                OnPageIndexChanging="gvUsuarios_PageIndexChanging"
+                             
                                 EnableModelValidation="True" BackColor="White"
                                 BorderColor="#000" BorderStyle="Solid"
                                 BorderWidth="1px" GridLines="None"
                                 CssClass="table table-condensed table-pedido"
                                 AutoGenerateColumns="false"
-                                OnSelectedIndexChanging=""
-                                OnSelectedIndexChanged=""
+                                
                                 DataKeyNames="">
 
                                 <AlternatingRowStyle BackColor="White" />

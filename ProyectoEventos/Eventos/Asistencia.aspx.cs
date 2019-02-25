@@ -36,6 +36,7 @@ namespace Eventos
 
                 Entidades.Asistencia asis = new Entidades.Asistencia();
 
+                asis.idUsuario = txtCedula.Text;
                 asis.idEvento = Convert.ToInt16(txtidEvento.Text);
                 asis.UsuarioRegistra = TxtUsuarioRegistra.Text;
                 asis.FechaRegistra = Convert.ToDateTime(TxtFechaRegistra.Text);
@@ -83,7 +84,7 @@ namespace Eventos
                 Entidades.Padron miPadron = new Entidades.Padron();
                 Entidades.Padron padron = new Entidades.Padron()
                 {
-                    id = txtCedula.Text,
+                    Cedula = txtCedula.Text,
                 };
 
                 miPadron = padL.SeleccionarPadron(padron);
@@ -97,6 +98,7 @@ namespace Eventos
                 }
                 else
                 {
+                    TxtUsuarioRegistra.Text = (Session["login"] as Usuario).Nombre;
                     txtCedula.Text = miPadron.Cedula;
                     txtidEvento.Text = miPadron.idEvento.ToString();
                     TxtFechaRegistra.Text = DateTime.Now.ToString();

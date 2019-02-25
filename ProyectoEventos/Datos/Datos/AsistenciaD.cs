@@ -20,13 +20,13 @@ namespace Datos.Datos
                 SqlCommand comando = new SqlCommand("SP_SEG_TRANS_ASISTENCIA");
                 comando.CommandType = CommandType.StoredProcedure;
 
-                comando.Parameters.AddWithValue("@id", asis.id);
                 comando.Parameters.AddWithValue("@idEvento", asis.idEvento);
                 comando.Parameters.AddWithValue("@idUsuario", asis.idUsuario);
-                comando.Parameters.AddWithValue("@usuarioRegistra", asis.UsuarioRegistra);
-                comando.Parameters.AddWithValue("@fechaRegistra", asis.FechaRegistra);
+                comando.Parameters.AddWithValue("@UsuarioRegistra", asis.UsuarioRegistra);
+                comando.Parameters.AddWithValue("@FechaRegistra", asis.FechaRegistra);
+                comando.Parameters.AddWithValue("@Estado", asis.Estado);
 
-                comando.Parameters.AddWithValue("@accion", accion);
+                comando.Parameters.AddWithValue("@Accion", accion);
 
                 db.ExecuteNonQuery(comando);
             }

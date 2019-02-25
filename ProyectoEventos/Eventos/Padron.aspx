@@ -15,6 +15,7 @@
                     </div>
                     <div class="row">
                         <ajaxToolkit:AjaxFileUpload ID="afuExcel" CssClass="" Width="300" AllowedFileTypes="xls,xlsx" MaximumNumberOfFiles="1" runat="server" ThrobberID="MyThrobber" OnUploadComplete="afuExcel_UploadComplete"/>
+
                     </div>
                     <div class="row">
                         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
