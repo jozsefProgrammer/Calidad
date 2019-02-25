@@ -12,7 +12,7 @@ namespace Logica
 {
     public class PadronL
     {
-        public void Nuevo(Padron padron, string accion, string archivo)
+        public static void Nuevo( string accion, string archivo,string idEvento)
         {
             List<Padron> lstPadrones = new List<Padron>();
             OleDbConnection conexion = null;
@@ -53,12 +53,12 @@ namespace Logica
                     Padron p = new Padron();
                     p.id = dataSet.Tables[0].Rows[i]["id"].ToString();
                     p.Nombre = dataSet.Tables[0].Rows[i]["Nombre"].ToString();
-                    p.Cedula = dataSet.Tables[0].Rows[i]["Cedula"].ToString();
-                    p.Estatus1 = dataSet.Tables[0].Rows[i]["Estatus1"].ToString();
-                    p.Estado2 = dataSet.Tables[0].Rows[i]["Estado2"].ToString();
+                    p.Cedula = dataSet.Tables[0].Rows[i]["Número Cédula"].ToString();
+                    p.Estatus1 = dataSet.Tables[0].Rows[i]["Estatus 1"].ToString();
+                    p.Estado2 = dataSet.Tables[0].Rows[i]["Estado 2 "].ToString();
                     p.Correo = dataSet.Tables[0].Rows[i]["Correo"].ToString();
                     p.Telefono = dataSet.Tables[0].Rows[i]["Telefono"].ToString();
-                    p.idEvento = Convert.ToInt16(dataSet.Tables[0].Rows[i]["idEvento"].ToString());
+                    p.idEvento = Convert.ToInt32(idEvento);
 
                     lstPadrones.Add(p);
                 }
@@ -67,7 +67,7 @@ namespace Logica
                     PadronD.Insertar(p, accion);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }
