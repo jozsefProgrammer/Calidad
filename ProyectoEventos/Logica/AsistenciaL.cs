@@ -28,13 +28,13 @@ namespace Logica
             try
             {
                 List<Asistencia> lista = new List<Asistencia>();
-                DataSet ds = PadronD.SeleccionarPadrones();
+                DataSet ds = AsistenciaD.SeleccionarAsistencias();
 
                 foreach (DataRow fila in ds.Tables[0].Rows)
                 {
                     Asistencia a = new Asistencia();
                     a.id = Convert.ToInt16(fila["id"].ToString());
-                    a.idEvento = Convert.ToInt16(fila["Nombre"].ToString());
+                    a.idEvento = Convert.ToInt16(fila["idEvento"].ToString());
                     a.idUsuario = fila["idUsuario"].ToString();
                     a.UsuarioRegistra = fila["UsuarioRegistra"].ToString();
                     a.FechaRegistra = Convert.ToDateTime(fila["FechaRegistra"].ToString());

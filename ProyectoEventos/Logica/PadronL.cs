@@ -12,6 +12,7 @@ namespace Logica
 {
     public class PadronL
     {
+        PadronD datos = new PadronD();
         public static void Nuevo( string accion, string archivo,string idEvento)
         {
             List<Padron> lstPadrones = new List<Padron>();

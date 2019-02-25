@@ -54,6 +54,7 @@ namespace Eventos
                 string archivo = Session["archivo"].ToString();
                 PadronL.Nuevo("I", archivo,ddlEvento.SelectedValue);
                 Session.Remove("archivo");
+                Response.Redirect("index.aspx");
             }
             catch (Exception)
             {
