@@ -80,8 +80,8 @@ namespace Eventos
         {
             try
             {
-                Padron miPadron = new Padron();
-                Padron padron = new Padron()
+                Entidades.Padron miPadron = new Entidades.Padron();
+                Entidades.Padron padron = new Entidades.Padron()
                 {
                     id = txtCedula.Text,
                 };

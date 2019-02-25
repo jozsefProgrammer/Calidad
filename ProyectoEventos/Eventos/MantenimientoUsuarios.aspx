@@ -9,7 +9,7 @@
             <div class="col-lg-6 offset-lg-3">
                 <div class="col-lg-6">
                     <div class="wrapper">
-                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        
                         <h2 class="form-signin-heading">Crear Usuario</h2>
                         <div class="container col-lg-12">
                             <div class="row">

@@ -113,7 +113,7 @@ namespace Logica
         {
             try
             {
-                DataSet ds = datos.SeleccionarPadron(padron);
+                DataSet ds = PadronD.SeleccionarPadron(padron);
                 Padron p = new Padron();
                 foreach (DataRow fila in ds.Tables[0].Rows)
                 {

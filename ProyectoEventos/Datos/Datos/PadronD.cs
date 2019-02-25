@@ -27,7 +27,7 @@ namespace Datos.Datos
             }
 
         }
-        public DataSet SeleccionarPadron(Padron padron)
+        public static DataSet SeleccionarPadron(Padron padron)
         {
             try
             {

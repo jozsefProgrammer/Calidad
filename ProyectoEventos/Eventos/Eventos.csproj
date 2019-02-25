@@ -87,6 +87,7 @@
     <Content Include="Recursos\bootstrap-4.3.1-dist\js\bootstrap.js.map" />
     <Content Include="Recursos\bootstrap-4.3.1-dist\js\bootstrap.min.js.map" />
     <Content Include="Menu.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
