@@ -27,6 +27,23 @@ namespace Datos.Datos
             }
 
         }
+        public DataSet SeleccionarPadron(Padron padron)
+        {
+            try
+            {
+                Database db = DatabaseFactory.CreateDatabase("Default");
+                SqlCommand comando = new SqlCommand("SP_SEG_SELECCIONAR_USUARIO_PADRON");
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@cedula", padron.Cedula);
+                DataSet ds = db.ExecuteReader(comando, "Padron");
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException(ex.Message);
+            }
+
+        }
         public static void Insertar(Padron padron, string accion)
         {
             try

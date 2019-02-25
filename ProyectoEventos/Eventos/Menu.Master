@@ -14,7 +14,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Eventos</a>
+        <a class="navbar-brand" href="index.aspx">Eventos</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,7 +24,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mantenimiento del Sistema
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Usuario</a>
+                        <a class="dropdown-item" href="MantenimientoUsuarios.aspx">Usuario</a>
                         <a class="dropdown-item" href="Eventos.aspx">Eventos</a>
                         <a class="dropdown-item" href="Padron.aspx">Importar Padrón</a>
                         <a class="dropdown-item" href="#">Asistencias</a>

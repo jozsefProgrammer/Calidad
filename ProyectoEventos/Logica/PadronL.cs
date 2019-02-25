@@ -108,5 +108,31 @@ namespace Logica
             }
 
         }
+
+        public Padron SeleccionarPadron(Padron padron)
+        {
+            try
+            {
+                DataSet ds = datos.SeleccionarPadron(padron);
+                Padron p = new Padron();
+                foreach (DataRow fila in ds.Tables[0].Rows)
+                {
+                    p.id = fila["id"].ToString();
+                    p.Nombre = fila["Nombre"].ToString();
+                    p.Cedula = fila["Cedula"].ToString();
+                    p.Estatus1 = fila["Estatus1"].ToString();
+                    p.Estado2 = fila["Estado2"].ToString();
+                    p.Correo = fila["Correo"].ToString();
+                    p.Telefono = fila["Telefono"].ToString();
+                    p.idEvento = Convert.ToInt16(fila["idEvento"]);
+                }
+
+                return p;
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException(ex.Message);
+            }
+        }
     }
 }

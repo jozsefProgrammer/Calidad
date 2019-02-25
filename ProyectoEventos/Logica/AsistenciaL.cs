@@ -11,7 +11,7 @@ namespace Logica
 {
     public class AsistenciaL
     {
-        public void Nuevo(Asistencia asis, string accion)
+        public static void Nuevo(Asistencia asis, string accion)
         {
             try
             {
