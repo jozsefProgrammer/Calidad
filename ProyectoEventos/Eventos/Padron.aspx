@@ -9,23 +9,30 @@
 
         <div class="row">
             <div class="col-lg-12 ">
-                <div class="col-lg-12">
-                    <div>
-                        <asp:DropDownList ID="ddlEvento" CssClass="form-control" runat="server"></asp:DropDownList>
-                    </div>
-                    <div class="row">
-                        <ajaxToolkit:AjaxFileUpload ID="afuExcel" CssClass="" Width="300" AllowedFileTypes="xls,xlsx" MaximumNumberOfFiles="1" runat="server" ThrobberID="MyThrobber" OnUploadComplete="afuExcel_UploadComplete"/>
-
-                    </div>
-                    <div class="row">
-                        <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                            <ContentTemplate>
-                                <asp:Button ID="btnGuardar" OnClick="btnGuardar_Click" CssClass="btn btn-dark" runat="server" Text="Guardar" />
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
-                    </div>
-                </div>
-
+                <div class="col-lg-6 offset-lg-3">
+                        <div class="col-lg-12">
+                            <p>
+                                <div>
+                                    <asp:DropDownList ID="ddlEvento" CssClass="form-control col-lg-12" runat="server"></asp:DropDownList>
+                                </div>
+                            </p>
+                            <p>
+                                <div class="row">
+                                    <ajaxToolkit:AjaxFileUpload ID="afuExcel" CssClass=" col-lg-12" Width="300" AllowedFileTypes="xls,xlsx" MaximumNumberOfFiles="1" runat="server" ThrobberID="MyThrobber" OnUploadComplete="afuExcel_UploadComplete"/>
+                        
+                                </div>
+                            </p>
+                            <p>
+                                <div class="row">
+                                    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                        <ContentTemplate>
+                                            <asp:Button ID="btnGuardar" OnClick="btnGuardar_Click" CssClass="btn btn-dark" runat="server" Text="Guardar" />
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </div>
+                            </p>
+                        </div>
+                   </div>
                 <div class="col-lg-12">
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>

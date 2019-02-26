@@ -6,43 +6,62 @@
         <div class="row">
 
             <div class="col-lg-6 offset-lg-3">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="wrapper">
                         
                         <h2 class="form-signin-heading">Marcar Asistencia</h2>
                         <div class="container col-lg-12">
-                            <div class="row">
-                                <div>
-                                    <asp:TextBox CssClass="form-control" ID="txtCedula" Required="true" placeholder="Cédula" runat="server"></asp:TextBox>
+                            <p>
+                                <div class="row">
+                                    <asp:TextBox CssClass="form-contro col-lg-12" ID="txtCedula" Required="true" placeholder="Cédula" runat="server"></asp:TextBox>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <asp:Button OnClick="btnBuscarUsuarioPadron_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnBuscarUsuarioPadron" runat="server" Text="Buscar Usuario" />
-                            </div>
-                            <div class="row">
-                                <div>
-                                    <asp:TextBox CssClass="form-control" ID="txtidEvento" placeholder="Evento" runat="server" Enabled="false"></asp:TextBox>
+                            </p>
+
+                            <p>
+                                <div class="row">
+                                    <asp:Button OnClick="btnBuscarUsuarioPadron_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnBuscarUsuarioPadron" runat="server" Text="Buscar Usuario" />
                                 </div>
-                            </div>
+                            </p>
+
+                            <p>
+                                <div class="row">
+                                    <asp:TextBox CssClass="form-control col-lg-12" ID="txtidEvento" placeholder="Evento" runat="server" Enabled="false"></asp:TextBox>
+                                </div>
+                            </p>
                             
-                            <div class="row">
-                                <asp:TextBox CssClass="form-control" ID="TxtUsuarioRegistra" placeholder="Nombre" runat="server" Enabled="false"></asp:TextBox>
-                            </div>
-                            <div class="row">
-                                <asp:TextBox CssClass="form-control" ID="TxtFechaRegistra" placeholder="Fecha del Registro" runat="server" Enabled="false"></asp:TextBox>
-                            </div>
-                            <div class="row">
-                                <asp:DropDownList ID="ddlEstado" CssClass="form-control" runat="server">
-                                    <asp:ListItem Value="Presente">Presente</asp:ListItem>
-                                    <asp:ListItem Value="Ausente">Ausente</asp:ListItem>
-                                </asp:DropDownList>
-                            </div>
-                            <div class="row">
-                                <asp:Button OnClick="btnCrearAsistencia_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnCrearAsistencia" runat="server" Text="Crear Asistencia" />
-                            </div>
-                            <div class="row">
-                                <asp:Button OnClick="btnLimpiar_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnLimpiar" runat="server" Text="Limpiar" />
-                            </div>
+                            <p>
+                                <div class="row">
+                                    <asp:TextBox CssClass="form-control col-lg-12" ID="TxtUsuarioRegistra" placeholder="Nombre" runat="server" Enabled="false"></asp:TextBox>
+                                </div>
+                            </p>
+
+                            <p>
+                                <div class="row">
+                                    <asp:TextBox CssClass="form-control col-lg-12" ID="TxtFechaRegistra" placeholder="Fecha del Registro" runat="server" Enabled="false"></asp:TextBox>
+                                </div>
+                            </p>
+
+                            <p>
+                                <div class="row">
+                                    <asp:DropDownList ID="ddlEstado" CssClass="form-control col-lg-12" runat="server">
+                                        <asp:ListItem Value="Presente">Presente</asp:ListItem>
+                                        <asp:ListItem Value="Ausente">Ausente</asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                            </p>
+
+                            <p>
+                                <div class="row">
+                                    <asp:Button OnClick="btnCrearAsistencia_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnCrearAsistencia" runat="server" Text="Crear Asistencia" />
+                                </div>
+                            </p>
+
+                            <p>
+                                <div class="row">
+                                    <asp:Button OnClick="btnLimpiar_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnLimpiar" runat="server" Text="Limpiar" />
+                                </div>
+                            </p>
+
                             <div class="alert alert-danger" runat="server" style="display: none;" id="error" role="alert">
                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                     <ContentTemplate>
