@@ -7,62 +7,43 @@
         <div class="row">
 
             <div class="col-lg-6 offset-lg-3">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <div class="wrapper">
                         
-                        <h2 class="form-signin-heading ">Crear Usuario</h2>
+                        <h2 class="form-signin-heading">Crear Usuario</h2>
                         <div class="container col-lg-12">
-                            
-                            <p>
-                                <div class="row">
-                                    <asp:TextBox CssClass="form-control  col-lg-12" ID="txtCedula" placeholder="Cédula" runat="server"></asp:TextBox>
+                            <div class="row">
+                                <div>
+                                    <asp:TextBox CssClass="form-control" ID="txtCedula" placeholder="Cédula" runat="server"></asp:TextBox>
                                 </div>
-                            </p>
-
-                            <p>
-                                <div class="row">
-                                    <asp:TextBox CssClass="form-control col-lg-12" ID="TxtNombre" placeholder="Nombre" runat="server"></asp:TextBox>
-                                </div>
-                            </p>
-
-                            <p>
-                                <div class="row">
-                                <asp:TextBox CssClass="form-control col-lg-12" ID="TxtContrasenna" placeholder="Contraseña" TextMode="Password" runat="server"></asp:TextBox>
-                                </div>
-                            </p>
-
-                            <p>
-                                <div class="row">
-                                <asp:DropDownList ID="ddlTipoUsuario" CssClass="form-control col-lg-12" runat="server">
+                            </div>
+                            <div class="row">
+                                <asp:TextBox CssClass="form-control" ID="TxtNombre" placeholder="Nombre" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="row">
+                                <asp:TextBox CssClass="form-control" ID="TxtContrasenna" placeholder="Contraseña" TextMode="Password" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="row">
+                                <asp:DropDownList ID="ddlTipoUsuario" CssClass="form-control" runat="server">
                                     <asp:ListItem Value="1">Administrador</asp:ListItem>
                                     <asp:ListItem Value="2">Registrador</asp:ListItem>
                                 </asp:DropDownList>
-                                </div>
-                            </p>
-
-                            <p>
-                                <div class="row">
-                                    <asp:DropDownList ID="ddlEstado" CssClass="form-control col-lg-12" runat="server">
-                                        <asp:ListItem Value="1">Activo</asp:ListItem>
-                                        <asp:ListItem Value="0">Inactivo</asp:ListItem>
-                                    </asp:DropDownList>
-                                </div>
-                            </p>
-
-                            <p>
-                                <div class="row">
-                                    <asp:Button OnClick="btnCrearUsuario_Click" CssClass="btn btn-lg btn-primary btn-block " ID="btnCrearUsuario" runat="server" Text="Crear Usuario" />
-                                </div>
-                            </p>
+                            </div>
+                            <div class="row">
+                                <asp:DropDownList ID="ddlEstado" CssClass="form-control" runat="server">
+                                    <asp:ListItem Value="1">Activo</asp:ListItem>
+                                    <asp:ListItem Value="0">Inactivo</asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+                            <div class="row">
+                                <asp:Button OnClick="btnCrearUsuario_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnCrearUsuario" runat="server" Text="Crear Usuario" />
+                            </div>
                             <div class="row">
                                 <asp:Button OnClick="btnActualizar_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnActualizar" runat="server" Visible="false" Text="Actualizar Usuario" />
                             </div>
-
-                            <p>
-                                <div class="row">
-                                    <asp:Button OnClick="btnLimpiar_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnLimpiar" runat="server" Text="Limpiar" />
-                                </div>
-                            </p>
+                            <div class="row">
+                                <asp:Button OnClick="btnLimpiar_Click" CssClass="btn btn-lg btn-primary btn-block" ID="btnLimpiar" runat="server" Text="Limpiar" />
+                            </div>
                             <div class="alert alert-danger" runat="server" style="display: none;" id="error" role="alert">
                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                     <ContentTemplate>

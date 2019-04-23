@@ -21,7 +21,9 @@ namespace Datos
 
                 Database db = new Database();
 
-                con = System.Configuration.ConfigurationManager.ConnectionStrings[nombre].ToString();
+                //con = "Data Source = localhost; Initial Catalog = EventosDB; User ID = sa; Password = 123456";
+                con = ConfigurationManager.ConnectionStrings[nombre].ToString();
+
 
                 SqlConnection conexion = new SqlConnection(con);
 
