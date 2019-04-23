@@ -10,38 +10,27 @@
 
             <div class="col-lg-6 offset-lg-3">
                 <div class="col-lg-12">    
-                    <div class="container col-lg-12">
-                        <p>
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <asp:TextBox ID="txtNombreEvento" placeholder="Nombre" CssClass="form-control col-lg-12" runat="server"></asp:TextBox>
-                            </div>
-                        </p>
-
-                        <p>
-                            <div class="form-group">
-                                <label>Fecha</label>
-                                <asp:TextBox ID="txtFecha" placeholder="día/mes/año(2019)" CssClass="form-control col-lg-12" runat="server"></asp:TextBox>
-                            </div>
-                        </p>
-
-                        <p>
-                            <div class="form-group">
-                                <label for="inputState">Estado</label>
-                                <asp:DropDownList ID="ddlEstado"  CssClass="form-control col-lg-12" runat="server">
-                                    <asp:ListItem Value="A">Activo</asp:ListItem>
-                                    <asp:ListItem Value="I">Inactivo</asp:ListItem>
-                                </asp:DropDownList>
-                            </div>
-                        </p>
-
-                        <div class="form-group">
-                            <asp:Button ID="btnGuardar" OnClick="btnGuardar_Click" CssClass="btn btn-dark" runat="server" Text="Guardar" />
-                            <asp:Button ID="btnEditar" Visible="false" OnClick="btnEditar_Click" CssClass="btn btn-dark" runat="server" Text="Editar" />
-                            <asp:Button ID="btnLimpiar" Visible="false" OnClick="btnLimpiar_Click" CssClass="btn btn-dark" runat="server" Text="Limpiar" />
-                        </div>
-                    
+                    <div class="row">
+                        <label>Nombre del Evento</label>
+                        <asp:TextBox ID="txtNombreEvento" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
+                    <div class="row">
+                        <label>Fecha</label>
+                        <asp:TextBox ID="txtFecha" CssClass="form-control " runat="server"></asp:TextBox>
+                    </div>
+                    <div class="row">
+                        <label for="inputState">Estado</label>
+                        <asp:DropDownList ID="ddlEstado" CssClass="form-control" runat="server">
+                            <asp:ListItem Value="A">Activo</asp:ListItem>
+                            <asp:ListItem Value="I">Inactivo</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <div class="row">
+                        <asp:Button ID="btnGuardar" OnClick="btnGuardar_Click" CssClass="btn btn-dark" runat="server" Text="Guardar" />
+                        <asp:Button ID="btnEditar" Visible="false" OnClick="btnEditar_Click" CssClass="btn btn-dark" runat="server" Text="Editar" />
+                        <asp:Button ID="btnLimpiar" Visible="false" OnClick="btnLimpiar_Click" CssClass="btn btn-dark" runat="server" Text="Limpiar" />
+                    </div>
+                    
                 </div>
             </div>
 
